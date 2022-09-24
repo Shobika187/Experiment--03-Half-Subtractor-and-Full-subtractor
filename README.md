@@ -39,19 +39,17 @@ Developed by: P Shobika
 RegisterNumber: 212221230096
 
 ```
-Half Subractor
-module sub(output b,d, input x,y);
-assign d = (x ^ y);
-assign b = (~ & y);
+## Half Subractor
+module full(output D,B,input x,y,z);
+assign D = x^y;
+assign B = (~x&y);
 endmodule
 ```
 Full Subractor
 ```
-module sub(X,Y,Z,B,D);
-input X,Y,Z;
-output B,D;
-assign D = (X^Y^Z);
-assign B = (~X&(Y^Z)|(Y&Z));
+module full(output D,B,input x,y,z);
+assign D = x^y^z;
+assign B = (~x&(y^z)|(yz));
 endmodule
 ```
 */
@@ -76,12 +74,13 @@ endmodule
 ## Half Subractor:
 
 
-![Screenshot (67)](https://user-images.githubusercontent.com/94508142/192107296-023863ad-f0ca-4f30-a1d8-1e4380dbeaed.png)
+![Screenshot (77)](https://user-images.githubusercontent.com/94508142/192109808-f002ecf4-f20f-45db-8709-1e2e5668cdc5.png)
+
 
 ## Full Subractor
 
+![Screenshot (78)](https://user-images.githubusercontent.com/94508142/192109802-f4b84a78-b1eb-4681-b72b-c704bbb6381f.png)
 
-![Screenshot (60)](https://user-images.githubusercontent.com/94508142/192107353-2b7ab8c4-a090-4aec-839b-9426ae8fb3d6.png)
 
 
 
@@ -89,12 +88,12 @@ endmodule
 ## Timing diagram
 
 ## Half Subractor:
+![Screenshot (76)](https://user-images.githubusercontent.com/94508142/192109820-d26de24a-1b3c-4aa5-b2bf-432bae5cec74.png)
 
-![Screenshot (61)](https://user-images.githubusercontent.com/94508142/192107368-c14cd607-b3bb-4c89-9ec3-f15e0ebe7988.png)
 
 ## Full Subractor
+![Screenshot (75)](https://user-images.githubusercontent.com/94508142/192109841-7b825856-0e78-4f62-9696-e034e96c846f.png)
 
-![Screenshot (62)](https://user-images.githubusercontent.com/94508142/192107374-97c065d8-3b6b-49cd-b20d-fcd1fd7ba26a.png)
 
 
 
